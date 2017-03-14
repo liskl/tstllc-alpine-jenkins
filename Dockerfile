@@ -3,7 +3,7 @@ FROM registry.liskl.com/tstllc/alpine-java8:latest
 # Dev-Ops Team
 MAINTAINER dl_team_devops@tstllc.net
 
-RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists
 
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
