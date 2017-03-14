@@ -1,12 +1,16 @@
 pipeline:
   docker:
     image: plugins/docker
-    repo: registry.liskl.com/tstllc/alpine-jenkins
+    repo: registry.tstllc.net/llisk/alpine-jenkins
+    ername: ${REPO_USERNAME}
+    password: ${REPO_PASSWORD}
+    email: ${REPO_EMAILADDR}
+    registry: registry.tstllc.net
     force_tag: true
 
 publish:
   docker:
-    repo: registry.liskl.com/tstllc/alpine-jenkins
+    repo: registry.tstllc.net/llisk/alpine-jenkins
     tag:
       - latest
     when:
@@ -15,7 +19,7 @@ publish:
 
 publish:
   docker:
-    repo: registry.liskl.com/tstllc/alpine-jenkins
+    repo: registry.tstllc.net/llisk/alpine-jenkins
     tag:
       - ${DRONE_BRANCH}-latest
       - ${DRONE_BRANCH}.build-${DRONE_BUILD_NUMBER}

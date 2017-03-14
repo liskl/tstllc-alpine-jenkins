@@ -1,4 +1,4 @@
-FROM registry.liskl.com/tstllc/alpine-java8:latest
+FROM registry.tstllc.net/llisk/alpine-java8:latest
 
 # Dev-Ops Team
 MAINTAINER dl_team_devops@tstllc.net
